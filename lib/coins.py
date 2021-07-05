@@ -713,16 +713,32 @@ class Radiocoin(AuxPowMixin, Coin):
     WIF_BYTE = bytes.fromhex("9e")
     GENESIS_HASH =  ('000007ce46e6c59844c34fa7ba5b27c8'
                      'dac0653a27fcfb7340cc0158849e4afd')
-    RPC_PORT = 9332
-    TX_COUNT = 10000
-    TX_COUNT_HEIGHT = 100
-    TX_PER_BLOCK = 20
-    REORG_LIMIT = 2000
+    ESTIMATE_FEE = 0.0001
+    RELAY_FEE = 0.0001
+    DAEMON = daemon.FakeEstimateFeeDaemon
     PEER_DEFAULT_PORTS = {'t':'50001', 's':'50002', 'h':'8181', 'g':'8182'}
     PEERS = [
 	'172.104.241.226 s50002 t50001',
         '104.237.145.126 s50002 t50001',
     ]
+    TX_COUNT = 10000
+    TX_COUNT_HEIGHT = 10000
+    TX_PER_BLOCK = 1
+
+class RadiocoinTestnet(Radiocoin):
+    NAME = "Radiocoin"
+    SHORTNAME = "XRADC"
+    NET = "testnet"
+    XPUB_VERBYTES = bytes.fromhex("043587cf")
+    XPRV_VERBYTES = bytes.fromhex("04358394")
+    P2PKH_VERBYTE = bytes.fromhex("71")
+    P2SH_VERBYTES = [bytes.fromhex("c4")]
+    WIF_BYTE = bytes.fromhex("f1")
+    GENESIS_HASH =  ('00000a2ee9363d21e47bc10d5b1e39d4'
+                     'ae4bd950491790e522f90dad86d2d1eb')
+
+
+   
 
 
 # Source: https://github.com/dashpay/dash
