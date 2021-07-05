@@ -1,0 +1,13 @@
+export HOST=104.237.145.126
+export REPORT_TCP_PORT=50001
+export REPORT_SSL_PORT=50002
+export REPORT_HOST=104.237.145.126
+export DB_DIRECTORY=/var/electrumx-db
+export DAEMON_URL=http://rpcuser:yW70pssqLGVeqbjekl@127.0.0.1:9332/
+export COIN=Radiocoin
+export ALLOW_ROOT=YES
+export SERVICES=tcp://0.0.0.0:50001,ssl://0.0.0.0:50002,wss://0.0.0.0:50004,rpc://
+export REPORT_SERVICES=tcp://104.237.145.126:50001,ssl://104.237.145.126:50002,wss://104.237.145.126:50004
+export SSL_CERTFILE=/etc/server.crt
+export SSL_KEYFILE=/etc/server.key
+
