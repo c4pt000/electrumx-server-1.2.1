@@ -1,0 +1,33 @@
+#export ELECTRUMX = dir-to/electrumx_server
+export REPORT_HOST=172.104.64.180
+
+export DB_DIRECTORY=/var/electrumx-db
+export DB_ENGINE=leveldb
+
+export DAEMON_URL=http://rpcuser:yW70pssqLGVeqbjekl@127.0.0.1:9332/
+export COIN=Radiocoin
+
+export ALLOW_ROOT=YES
+
+export PEER_DISCOVERY=ON
+export TCP_PORT=50001
+export SSL_PORT=50002
+export REPORT_TCP_PORT=50001
+export REPORT_SSL_PORT=50002
+
+export SERVICES=tcp://172.104.64.180:50001,ssl://172.104.64.180:50002,wss://172.104.64.180:50004,rpc://
+export REPORT_SERVICES=tcp://172.104.64.180:50001,ssl://172.104.64.180:50002,wss://172.104.64.180:50004
+export MAX_SESSIONS=2000
+export CACHE_MB=1800
+export SSL_CERTFILE=/etc/server.crt
+export SSL_KEYFILE=/etc/server.key
+export DAEMON_VERSION=radiocoin-electrumX-for.2.2.1
+export BANNER_FILE=/etc/banner.txt
+export DONATION_ADDRESS=DMq9mjF2BpWA9EZhMcpMmi6voVXiBMJY9B
+#export ANON_LOGS=whats a log
+
+
+# cp server.* /etc
+# cp banner.txt /etc
+#echo "ulimit -n 10000" >> ~/.bash_profile
+# source ~/.bash_profile
