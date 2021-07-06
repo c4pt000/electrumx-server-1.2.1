@@ -298,7 +298,7 @@ class Coin(object):
 
 
 class AuxPowMixin(object):
-    STATIC_BLOCK_HEADERS = False
+    STATIC_BLOCK_HEADERS = True
     DESERIALIZER = lib_tx.DeserializerAuxPow
 
     @classmethod
@@ -724,6 +724,8 @@ class Radiocoin(AuxPowMixin, Coin):
     TX_COUNT = 10000
     TX_COUNT_HEIGHT = 10000
     TX_PER_BLOCK = 1
+    DESERIALIZER = lib_tx.DeserializerAuxPow
+
 
 class RadiocoinTestnet(Radiocoin):
     NAME = "Radiocoin"
