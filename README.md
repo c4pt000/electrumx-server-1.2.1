@@ -1,4 +1,4 @@
-requires Python3.7
+requires Python3.7 to run native, docker image is broken from external connections might be rpcallowip=172.17.x.x (see rpc allow from subnet)
 
 ```
 docker run -it -d --net host c4pt/electrumx-121-dogeradio
