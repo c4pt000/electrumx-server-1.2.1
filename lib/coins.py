@@ -717,10 +717,6 @@ class Radiocoin(AuxPowMixin, Coin):
     RELAY_FEE = 0.0001
     DAEMON = daemon.FakeEstimateFeeDaemon
     PEER_DEFAULT_PORTS = {'t':'50001', 's':'50002', 'h':'8181', 'g':'8182'}
-    PEERS = [
-	'172.104.241.226 s50002 t50001',
-        '104.237.145.126 s50002 t50001',
-    ]
     TX_COUNT = 10000
     TX_COUNT_HEIGHT = 10000
     TX_PER_BLOCK = 1
